@@ -7,8 +7,12 @@ function filterCarByAvailability(cars) {
 
   // Tulis code-mu disini
   // Rubah code ini dengan array hasil filter berdasarkan availablity
-  console.table(result);
-  cars.forEach(mobil => (mobil.available === true) ? result.push(mobil) : null);
-
+ 
+  cars.forEach(mobil => {
+    if (mobil.available === true) {
+      result.push(mobil);
+    }
+  });
+ console.table(result);
   return result;
 }
